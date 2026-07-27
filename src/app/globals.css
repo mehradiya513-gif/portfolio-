@@ -1,26 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital,wght@0,400;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
 @import "tailwindcss";
 
+@theme {
+  --color-brand-violet: #9c8eb9; /* Muted Lavender */
+  --color-brand-cyan: #86a38f;   /* Muted Sage Green */
+  --color-brand-magenta: #dca0a0;/* Muted Rose */
+  --color-brand-emerald: #e2c2b3;/* Muted Peach */
+  --color-bg-dark: #fbfaf5;      /* Parchment White bg */
+  --color-card-dark: rgba(255, 255, 255, 0.75);
+  --color-border-dark: rgba(0, 0, 0, 0.035);
+  
+  --font-display: "Instrument Serif", serif;
+  --font-sans: "Plus Jakarta Sans", sans-serif;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fbfaf5;
+  --foreground: #323338;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html, body {
+  background-color: var(--background);
+  color: var(--foreground);
+  scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base Editorial Headers */
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: -0.01em;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #fbfaf5;
+}
+::-webkit-scrollbar-thumb {
+  background: #e5e4dc;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9c8eb9;
+}
+
+/* Soft Editorial Glassmorphism */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 24px -10px rgba(80, 78, 70, 0.05);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(156, 142, 185, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(156, 142, 185, 0.08);
+  transform: translateY(-2px);
+}
+
+/* Muted Shadows */
+.glow-violet {
+  box-shadow: 0 8px 30px -8px rgba(156, 142, 185, 0.06);
+}
+.glow-cyan {
+  box-shadow: 0 8px 30px -8px rgba(134, 163, 143, 0.06);
+}
+
+/* Custom Cursor Glow (Soft Warm Light Sunbeam) */
+.custom-cursor {
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(226, 194, 179, 0.12) 0%, rgba(156, 142, 185, 0.05) 50%, rgba(0,0,0,0) 75%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.12s ease-out;
+}
+
+/* Notebook Grid Lines Background */
+.grid-bg {
+  background-size: 30px 30px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.012) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.012) 1px, transparent 1px);
+}
+
+/* Soft Editorial Text Gradients */
+.text-gradient-purple {
+  background: linear-gradient(135deg, #7c6d99 0%, #ca8f8f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+  background: linear-gradient(135deg, #6c8a77 0%, #87a38f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-dual {
+  background: linear-gradient(135deg, #9c8eb9 0%, #86a38f 50%, #dca0a0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
