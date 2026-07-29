@@ -55,7 +55,6 @@ export default function FormalSection() {
   const courses = [
     { title: "Database Systems", details: "Relational tables, schema layouts, writing SQL queries", icon: Database },
     { title: "Web Development", details: "Modern HTML/CSS, React scripting, client-server logic", icon: Code2 },
-    { title: "Software Engineering", details: "Development life cycle, design principles, diagrams", icon: LayoutGrid },
     { title: "Operating Systems & Networks", details: "Process planning, protocol layers, basic security", icon: Cpu },
   ];
 
@@ -122,7 +121,7 @@ export default function FormalSection() {
         </div>
 
         {/* Academics Overview */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-16 font-sans">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 font-sans">
           {courses.map((course, idx) => {
             const Icon = course.icon;
             return (
