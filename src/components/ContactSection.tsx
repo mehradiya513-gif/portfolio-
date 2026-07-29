@@ -110,11 +110,11 @@ export default function ContactSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-16 contact-heading font-sans">
+        <div className="text-left mb-16 contact-heading font-sans">
           <h2 className="text-4xl sm:text-6xl font-serif text-slate-800 mb-4 font-normal">
             Send me a <span className="italic font-light text-brand-violet">note</span>
           </h2>
-          <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light">
+          <p className="text-slate-500 max-w-xl text-sm sm:text-base font-light">
             Have an interesting project, campaign suggestion, or just want to say hi? Drop me a letter!
           </p>
         </div>

@@ -106,11 +106,11 @@ export default function PersonalSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-16 personal-heading">
+        <div className="text-left mb-16 personal-heading">
           <h2 className="text-4xl sm:text-6xl font-serif text-slate-800 mb-4 font-normal">
             My Story &amp; <span className="italic font-light text-brand-violet">Journey</span>
           </h2>
-          <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light font-sans">
+          <p className="text-slate-500 max-w-xl text-sm sm:text-base font-light font-sans">
             A small look into my school notebooks, code files, and how I find joy connecting frontend logic with creative media.
           </p>
         </div>

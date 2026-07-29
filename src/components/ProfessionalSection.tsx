@@ -199,11 +199,11 @@ export default function ProfessionalSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-16 prof-heading font-sans">
+        <div className="text-left mb-16 prof-heading font-sans">
           <h2 className="text-4xl sm:text-6xl font-serif text-slate-800 mb-4 font-normal">
             Professional <span className="italic font-light text-brand-violet">Experiments</span>
           </h2>
-          <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light">
+          <p className="text-slate-500 max-w-xl text-sm sm:text-base font-light">
             Combining Next.js web development with creative social strategies and visual content calendars.
           </p>
         </div>

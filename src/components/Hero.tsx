@@ -39,7 +39,7 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+      className="relative min-h-screen flex items-center justify-start pt-24 overflow-hidden"
     >
       {/* Background Decorative Glows */}
       <div className="absolute top-[20%] left-[10%] w-[350px] h-[350px] bg-brand-violet/5 rounded-full blur-[100px] pointer-events-none" />
@@ -48,9 +48,9 @@ export default function Hero() {
       {/* Subtle Grid overlay */}
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-5xl mx-auto px-6 text-left relative z-10 w-full">
         {/* Dynamic Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-slate-600 mb-8 border border-black/5 bg-white/70 shadow-sm font-sans">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-slate-600 mb-8 border border-black/5 bg-white/70 shadow-sm font-sans w-fit">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-violet/80 animate-pulse"></span>
           <span>Web Developer &amp; Social Media Strategist</span>
         </div>
@@ -69,7 +69,7 @@ export default function Hero() {
         {/* Subtitle */}
         <p
           ref={textRef}
-          className="text-base sm:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed font-light font-sans"
+          className="text-base sm:text-xl text-slate-500 max-w-3xl mb-10 leading-relaxed font-light font-sans"
         >
           Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong>, specializing in building responsive <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Web Applications</strong>, creative <strong className="text-brand-violet font-semibold font-serif italic text-lg sm:text-xl">Content Creation</strong>, and result-oriented <strong className="text-brand-magenta font-semibold font-serif italic text-lg sm:text-xl">Social Media Management</strong>.
         </p>
@@ -77,7 +77,7 @@ export default function Hero() {
         {/* Call to Actions */}
         <div
           ref={buttonRef}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 font-sans"
+          className="flex flex-col sm:flex-row items-center justify-start w-full gap-4 font-sans"
         >
           <a
             href="#formal"

@@ -112,11 +112,11 @@ export default function FormalSection() {
 
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
-        <div className="text-center mb-16 formal-heading font-sans">
+        <div className="text-left mb-16 formal-heading font-sans">
           <h2 className="text-4xl sm:text-6xl font-serif text-slate-800 mb-4 font-normal">
             Formal <span className="italic font-light text-brand-cyan">Portfolio</span>
           </h2>
-          <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light">
+          <p className="text-slate-500 max-w-xl text-sm sm:text-base font-light">
             Highlighting academic coursework study notes, programming skills, and student projects from my BCA degree.
           </p>
         </div>
@@ -147,7 +147,7 @@ export default function FormalSection() {
         </div>
 
         {/* Tab Toggle Navigation */}
-        <div className="flex justify-center mb-12 font-sans">
+        <div className="flex justify-start mb-12 font-sans">
           <div className="inline-flex rounded-full bg-black/5 p-1 border border-black/5">
             <button
               onClick={() => setActiveTab("projects")}
