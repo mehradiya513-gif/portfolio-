@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import { TrendingUp, Sparkles, Search, BarChart3 } from "lucide-react";
+import { TrendingUp, Sparkles, Search, BarChart3, Calculator, DollarSign, Percent } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -12,6 +12,20 @@ export default function ProfessionalSection() {
   const metricsRef = useRef<HTMLDivElement>(null);
   const chartPathRef = useRef<SVGPathElement>(null);
   const [selectedCampaign, setSelectedCampaign] = useState("seo");
+
+  // ROI Calculator State
+  const [adSpend, setAdSpend] = useState(1500);
+  const [cpc, setCpc] = useState(0.75);
+  const [convRate, setConvRate] = useState(2.5);
+  const [aov, setAov] = useState(80);
+
+  // Calculations
+  const clicks = Math.round(adSpend / Math.max(cpc, 0.01));
+  const conversions = Math.round(clicks * (convRate / 100));
+  const revenue = conversions * aov;
+  const roas = adSpend > 0 ? (revenue / adSpend).toFixed(2) : "0.00";
+  const cac = conversions > 0 ? (adSpend / conversions).toFixed(2) : "0.00";
+  const isProfitable = parseFloat(roas) >= 1.0;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -354,6 +368,152 @@ export default function ProfessionalSection() {
                 <span>Month 3</span>
                 <span>Month 4</span>
                 <span>Month 5</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Programmatic ROI & SEO Value Calculator */}
+        <div className="mt-16 glass-card rounded-3xl border border-black/5 p-6 sm:p-10 relative overflow-hidden glow-violet font-sans">
+          <div className="absolute top-0 right-0 w-32 h-32 bg-brand-violet/5 rounded-full blur-xl pointer-events-none" />
+          
+          <div className="flex items-center gap-2 text-brand-violet text-xs font-bold uppercase tracking-widest mb-2">
+            <Calculator className="w-4 h-4 animate-pulse" />
+            <span>Interactive growth sandbox</span>
+          </div>
+          
+          <div className="mb-8">
+            <h3 className="text-2xl font-serif font-normal text-slate-800 mb-2">
+              Programmatic ROI Calculator
+            </h3>
+            <p className="text-slate-500 text-xs sm:text-sm font-light">
+              Demonstrating the bridge between code logic (React state calculations) and digital marketing economics. Slide the values to estimate your campaign returns.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+            {/* Controls */}
+            <div className="lg:col-span-6 space-y-6 bg-black/5 p-6 rounded-2xl border border-black/5">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-2 flex items-center gap-1.5">
+                <Percent className="w-3.5 h-3.5 text-brand-violet" />
+                <span>Campaign Parameters</span>
+              </h4>
+              
+              {/* Ad Spend */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs font-semibold">
+                  <span className="text-slate-600">Monthly Ad Budget</span>
+                  <span className="text-brand-violet font-bold">${adSpend.toLocaleString()}</span>
+                </div>
+                <input
+                  type="range"
+                  min="200"
+                  max="10000"
+                  step="100"
+                  value={adSpend}
+                  onChange={(e) => setAdSpend(Number(e.target.value))}
+                  className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
+                />
+              </div>
+
+              {/* CPC */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs font-semibold">
+                  <span className="text-slate-600">Cost Per Click (CPC)</span>
+                  <span className="text-brand-violet font-bold">${cpc.toFixed(2)}</span>
+                </div>
+                <input
+                  type="range"
+                  min="0.10"
+                  max="5.00"
+                  step="0.05"
+                  value={cpc}
+                  onChange={(e) => setCpc(Number(e.target.value))}
+                  className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
+                />
+              </div>
+
+              {/* Conversion Rate */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs font-semibold">
+                  <span className="text-slate-600">Landing Page Conv. Rate</span>
+                  <span className="text-brand-violet font-bold">{convRate.toFixed(1)}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0.5"
+                  max="15.0"
+                  step="0.1"
+                  value={convRate}
+                  onChange={(e) => setConvRate(Number(e.target.value))}
+                  className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
+                />
+              </div>
+
+              {/* AOV */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs font-semibold">
+                  <span className="text-slate-600">Average Order Value (AOV)</span>
+                  <span className="text-brand-violet font-bold">${aov}</span>
+                </div>
+                <input
+                  type="range"
+                  min="10"
+                  max="500"
+                  step="5"
+                  value={aov}
+                  onChange={(e) => setAov(Number(e.target.value))}
+                  className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
+                />
+              </div>
+            </div>
+
+            {/* Results Display */}
+            <div className="lg:col-span-6 flex flex-col justify-between p-6 rounded-2xl border border-black/5 bg-white/40 shadow-inner">
+              <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-6 flex items-center gap-1.5">
+                <DollarSign className="w-3.5 h-3.5 text-brand-cyan" />
+                <span>Performance Metrics</span>
+              </h4>
+
+              {/* Grid of basic stats */}
+              <div className="grid grid-cols-2 gap-4 mb-6">
+                <div className="p-4 rounded-xl border border-black/5 bg-white/60">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Clicks</span>
+                  <span className="text-lg font-black text-slate-800">{clicks.toLocaleString()}</span>
+                </div>
+                <div className="p-4 rounded-xl border border-black/5 bg-white/60">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Conversions</span>
+                  <span className="text-lg font-black text-slate-800">{conversions.toLocaleString()}</span>
+                </div>
+                <div className="p-4 rounded-xl border border-black/5 bg-white/60">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">CAC (Cost/Acq.)</span>
+                  <span className="text-lg font-black text-slate-800">${cac}</span>
+                </div>
+                <div className="p-4 rounded-xl border border-black/5 bg-white/60">
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Projected Revenue</span>
+                  <span className="text-lg font-black text-slate-800">${revenue.toLocaleString()}</span>
+                </div>
+              </div>
+
+              {/* Highlight Return */}
+              <div className={`p-5 rounded-2xl border flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left transition-all duration-300 ${
+                isProfitable
+                  ? "bg-brand-cyan/15 border-brand-cyan/25 text-slate-800"
+                  : "bg-brand-magenta/15 border-brand-magenta/25 text-slate-800"
+              }`}>
+                <div>
+                  <span className="block text-[10px] uppercase tracking-wider font-semibold opacity-70 mb-1">
+                    Projected ROAS
+                  </span>
+                  <span className="text-3xl font-black text-slate-800">{roas}x</span>
+                </div>
+                <div className="text-xs font-semibold px-4 py-2 rounded-full border bg-white/90 shadow-sm">
+                  {isProfitable ? (
+                    <span className="text-brand-cyan">✓ Profitable Campaign</span>
+                  ) : (
+                    <span className="text-brand-magenta">⚠ Low Conversion / High CPC</span>
+                  )}
+                </div>
               </div>
             </div>
           </div>

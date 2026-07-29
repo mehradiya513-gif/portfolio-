@@ -75,9 +75,9 @@ export default function PersonalSection() {
     },
     {
       title: "Creative Extension",
-      subtitle: "AI Digital Marketing Specialist",
+      subtitle: "Digital Marketer & Strategist",
       description:
-        "Synthesizing coding logic with human copywriting. Working with large language models to map keyword intents, model funnels, and write targeted campaigns.",
+        "Synthesizing computer science logic with digital growth campaigns. Running SEO audits, optimizing landing pages, setting up tracking pixels, and analyzing funnel conversions.",
       icon: Award,
       color: "text-brand-magenta border-brand-magenta/20 bg-brand-magenta/5",
       tag: "Specialization",

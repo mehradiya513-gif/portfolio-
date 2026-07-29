@@ -60,41 +60,41 @@ export default function FormalSection() {
   ];
 
   const skills = [
-    { name: "JavaScript / ES6", level: "90%" },
-    { name: "TypeScript", level: "80%" },
-    { name: "React / Next.js", level: "85%" },
-    { name: "Node.js / Express", level: "80%" },
+    { name: "React / Next.js & TypeScript", level: "85%" },
+    { name: "Python & Automation Scripts", level: "80%" },
     { name: "SQL (MySQL / PostgreSQL)", level: "75%" },
-    { name: "Python", level: "70%" },
-    { name: "HTML5 / CSS3 / Tailwind", level: "95%" },
-    { name: "Git & Version Control", level: "85%" },
+    { name: "Node.js & Express API Development", level: "80%" },
+    { name: "Semantic SEO & Technical Audits", level: "90%" },
+    { name: "Web Analytics (GA4, GTM & Pixels)", level: "85%" },
+    { name: "HTML5 / CSS3 / Tailwind CSS", level: "95%" },
+    { name: "Git & Version Control Workflow", level: "85%" },
   ];
 
   const projects = [
     {
-      title: "EduManage ERP Database System",
-      category: "Academic SQL Project",
+      title: "SEO Keyword Rank Tracker API",
+      category: "Python & SQL Automation",
       description:
-        "I designed this relational schema to solve student planning overlaps in schools. It compiles enrollment metrics, course timings, and teacher assignments. Building this taught me data normalization and indexing.",
-      tech: ["MySQL", "Node.js", "Express", "REST APIs"],
+        "I developed a custom Python script that tracks organic search engine rank positions (SERPs) for target keywords. It runs on a scheduler, scrapes rankings, and populates a SQL database. It features an automated alert system for rank drops.",
+      tech: ["Python", "BeautifulSoup", "PostgreSQL", "Cron Tasks"],
       icon: Database,
       link: "#",
     },
     {
-      title: "OmniStore Full-Stack Web App",
-      category: "Web Engineering Project",
+      title: "LeadGen AI Conversational Widget",
+      category: "Full-Stack AI Project",
       description:
-        "My first major full-stack venture. I built this e-commerce project to understand user session cookies, mongo database pipelines, and checkout state syncing. I focused heavily on card animations and mobile layouts.",
-      tech: ["Next.js", "React", "Tailwind CSS", "MongoDB"],
-      icon: Globe,
+        "A conversational chatbot widget powered by Google's Gemini API designed to qualify incoming marketing leads on landing pages. It understands user intents, answers FAQs, and forwards high-intent leads directly to a backend webhook.",
+      tech: ["Next.js", "React", "Gemini API", "Tailwind CSS"],
+      icon: BrainCircuit,
       link: "#",
     },
     {
-      title: "Algorithmic Path Visualizer",
-      category: "Frontend UI Exploration",
+      title: "EduManage ERP Database Schema",
+      category: "BCA Database Engineering",
       description:
-        "I was fascinated by how Dijkstra and A* search algorithms draw routes. I built this interactive tool in React to render graph nodes and wall constraints on a grid canvas, allowing users to watch the search execute.",
-      tech: ["React", "HTML5 Canvas", "Tailwind CSS", "Algorithms"],
+        "Designed a relational database schema solving class schedule overlaps. Structured normalized tables for students, schedules, and faculty, and optimized queries with compound indexing to handle high-frequency reads.",
+      tech: ["MySQL", "Relational Design", "Query Optimization"],
       icon: Terminal,
       link: "#",
     },

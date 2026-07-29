@@ -71,7 +71,7 @@ export default function Hero() {
           ref={textRef}
           className="text-base sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed font-light font-sans"
         >
-          Welcome to my digital living room. I am a 19-year-old student pursuing my final year in <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong>, while experimenting with <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">AI-driven marketing frameworks</strong> to connect code with real-world users.
+          Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong> and working as a <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Digital Marketer</strong>, bridging database logic with customer acquisition campaigns.
         </p>
 
         {/* Call to Actions */}
