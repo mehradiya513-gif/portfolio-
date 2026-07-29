@@ -60,41 +60,41 @@ export default function FormalSection() {
   ];
 
   const skills = [
-    { name: "React / Next.js & TypeScript", level: "85%" },
-    { name: "Python & Automation Scripts", level: "80%" },
-    { name: "SQL (MySQL / PostgreSQL)", level: "75%" },
-    { name: "Node.js & Express API Development", level: "80%" },
-    { name: "Semantic SEO & Technical Audits", level: "90%" },
-    { name: "Web Analytics (GA4, GTM & Pixels)", level: "85%" },
-    { name: "HTML5 / CSS3 / Tailwind CSS", level: "95%" },
-    { name: "Git & Version Control Workflow", level: "85%" },
+    { name: "Frontend Web Dev (HTML5/CSS3/JS)", level: "95%" },
+    { name: "React & Next.js Frameworks", level: "85%" },
+    { name: "Tailwind CSS & Modern Layouts", level: "90%" },
+    { name: "Social Media Analytics & Strategy", level: "85%" },
+    { name: "Content Creation & Copywriting", level: "90%" },
+    { name: "Visual Design (Figma, Canva)", level: "80%" },
+    { name: "Search Engine Optimization (SEO)", level: "75%" },
+    { name: "Git & Version Control Workflow", level: "80%" },
   ];
 
   const projects = [
     {
-      title: "SEO Keyword Rank Tracker API",
-      category: "Python & SQL Automation",
+      title: "Interactive Portfolio Hub",
+      category: "Web Development",
       description:
-        "I developed a custom Python script that tracks organic search engine rank positions (SERPs) for target keywords. It runs on a scheduler, scrapes rankings, and populates a SQL database. It features an automated alert system for rank drops.",
-      tech: ["Python", "BeautifulSoup", "PostgreSQL", "Cron Tasks"],
-      icon: Database,
+        "Designed and engineered this beautiful personal portfolio website utilizing Next.js, React 19, and Tailwind CSS. Integrated smooth layout micro-animations and physics-based particle backgrounds.",
+      tech: ["Next.js", "React", "Tailwind CSS", "GSAP Animations"],
+      icon: Globe,
       link: "#",
     },
     {
-      title: "LeadGen AI Conversational Widget",
-      category: "Full-Stack AI Project",
+      title: "Social Campaigns Analytics Dashboard",
+      category: "Social Media Strategy",
       description:
-        "A conversational chatbot widget powered by Google's Gemini API designed to qualify incoming marketing leads on landing pages. It understands user intents, answers FAQs, and forwards high-intent leads directly to a backend webhook.",
-      tech: ["Next.js", "React", "Gemini API", "Tailwind CSS"],
+        "Developed a mock analytics dashboard in React to compile engagement stats, view counts, and conversion rate optimizations for multiple brand social channels. Created clean SVG charts representing trend growths.",
+      tech: ["React", "SVG Charts", "State Management", "Figma Design"],
       icon: BrainCircuit,
       link: "#",
     },
     {
-      title: "EduManage ERP Database Schema",
-      category: "BCA Database Engineering",
+      title: "Brand Content Production Hub",
+      category: "Content Creation",
       description:
-        "Designed a relational database schema solving class schedule overlaps. Structured normalized tables for students, schedules, and faculty, and optimized queries with compound indexing to handle high-frequency reads.",
-      tech: ["MySQL", "Relational Design", "Query Optimization"],
+        "Curated a digital creator dashboard organizing content schedules, scripting prompts, design assets, and video frameworks. Used to streamline and track short-form media and copywriting campaigns.",
+      tech: ["Content Strategy", "Copywriting", "Creator Workflows"],
       icon: Terminal,
       link: "#",
     },

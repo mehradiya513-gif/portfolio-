@@ -11,20 +11,21 @@ export default function ProfessionalSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const metricsRef = useRef<HTMLDivElement>(null);
   const chartPathRef = useRef<SVGPathElement>(null);
-  const [selectedCampaign, setSelectedCampaign] = useState("seo");
+  const [selectedCampaign, setSelectedCampaign] = useState("webdev");
 
-  // ROI Calculator State
-  const [adSpend, setAdSpend] = useState(1500);
-  const [cpc, setCpc] = useState(0.75);
-  const [convRate, setConvRate] = useState(2.5);
-  const [aov, setAov] = useState(80);
+  // Campaign & Web Calculator State
+  const [campaignCost, setCampaignCost] = useState(500);
+  const [socialReach, setSocialReach] = useState(15000);
+  const [socialCtr, setSocialCtr] = useState(2.5);
+  const [webConvRate, setWebConvRate] = useState(3.0);
+  const [aov, setAov] = useState(60);
 
   // Calculations
-  const clicks = Math.round(adSpend / Math.max(cpc, 0.01));
-  const conversions = Math.round(clicks * (convRate / 100));
+  const webTraffic = Math.round(socialReach * (socialCtr / 100));
+  const conversions = Math.round(webTraffic * (webConvRate / 100));
   const revenue = conversions * aov;
-  const roas = adSpend > 0 ? (revenue / adSpend).toFixed(2) : "0.00";
-  const cac = conversions > 0 ? (adSpend / conversions).toFixed(2) : "0.00";
+  const roas = campaignCost > 0 ? (revenue / campaignCost).toFixed(2) : "0.00";
+  const cpl = conversions > 0 ? (campaignCost / conversions).toFixed(2) : "0.00";
   const isProfitable = parseFloat(roas) >= 1.0;
 
   useEffect(() => {
@@ -132,53 +133,53 @@ export default function ProfessionalSection() {
 
   const marketingServices = [
     {
-      title: "Semantic Intent SEO",
-      description: "Applying natural language parsing models to structure content databases, align keyword entities, and write query-optimized technical pages.",
+      title: "Web Design & Development",
+      description: "Engineering modern, responsive web experiences with React, Next.js, and clean Tailwind layouts. Focused on performance, SEO friendliness, and accessibility.",
       icon: Search,
       color: "text-brand-cyan border-brand-cyan/25 bg-brand-cyan/5",
     },
     {
-      title: "Generative Content Systems",
-      description: "Developing structured prompting loops and system instructions to output on-brand newsletters, copy fragments, and social assets at scale.",
+      title: "Social Media Management",
+      description: "Formulating digital campaigns, constructing detailed content calendars, running analytics reviews, and scaling organic brand presence across channels.",
       icon: Sparkles,
       color: "text-brand-magenta border-brand-magenta/25 bg-brand-magenta/5",
     },
     {
-      title: "cohort Funnel Tracking",
-      description: "Configuring scripts and analytics pixels to parse user actions, monitor checkout drops, and study how visual design affects customer retention.",
+      title: "Content & Brand Strategy",
+      description: "Writing engaging copywriting, scripting reels and video formats, designing creative social assets, and establishing unified brand identities.",
       icon: TrendingUp,
       color: "text-brand-violet border-brand-violet/25 bg-brand-violet/5",
     },
   ];
 
   const dashboardData: Record<string, { title: string; desc: string; metrics: Array<{ label: string; val: string; target: number; p?: boolean; x?: boolean }>; chartPoints: string }> = {
-    seo: {
-      title: "Semantic Content Optimization",
-      desc: "Performance curves tracking search metrics after migrating to schema-structured landing page designs.",
+    webdev: {
+      title: "Web Core Vitals & Speed",
+      desc: "Performance scores and response curves demonstrating fast page load speeds and code optimization.",
       metrics: [
-        { label: "Search Clicks", val: "+145%", target: 145, p: true },
-        { label: "Search Impressions", val: "+220%", target: 220, p: true },
-        { label: "SERP Position Gain", val: "8.4", target: 8.4 },
+        { label: "Lighthouse Score", val: "98", target: 98 },
+        { label: "LCP Response", val: "-65%", target: 65, p: true },
+        { label: "Load Speed Index", val: "99%", target: 99, p: true },
       ],
       chartPoints: "M 0 100 Q 50 80 100 90 T 200 40 T 300 60 T 400 10 T 500 20 T 600 5",
     },
-    copywriting: {
-      title: "LLM Copywriting Speed",
-      desc: "Speed multipliers and conversion lifts observed after training custom local GPT system prompts.",
+    social: {
+      title: "Social Channel Analytics",
+      desc: "Growth analytics monitoring organic subscriber reach and overall campaign impression lifts.",
       metrics: [
-        { label: "Pipeline Velocity", val: "4.5x", target: 4.5, x: true },
-        { label: "Copy CTR Increase", val: "+32%", target: 32, p: true },
-        { label: "Page Signup Rate", val: "4.2%", target: 4.2, x: true },
+        { label: "Followers Growth", val: "+12k", target: 12 },
+        { label: "Avg Engagement", val: "5.8x", target: 5.8, x: true },
+        { label: "Campaign Impressions", val: "+250%", target: 250, p: true },
       ],
       chartPoints: "M 0 100 Q 50 95 100 70 T 200 80 T 300 30 T 400 45 T 500 15 T 600 12",
     },
-    funnel: {
-      title: "Ad Spend & Checkout Conversion",
-      desc: "Spend curves and shopping drop reductions after restructuring our responsive funnel grids.",
+    content: {
+      title: "Content Reach & Click-Throughs",
+      desc: "Audience acquisition details measuring click-through conversion rates for newsletters and reels.",
       metrics: [
-        { label: "Ad Return Lift", val: "5.4x", target: 5.4, x: true },
-        { label: "Abandonment Drop", val: "-28%", target: 28, p: true },
-        { label: "Customer LTV Gain", val: "+15%", target: 15, p: true },
+        { label: "Short-Form Views", val: "+450k", target: 450 },
+        { label: "Newsletter CTR", val: "4.2%", target: 4.2, x: true },
+        { label: "Sign-Up Actions", val: "+85%", target: 85, p: true },
       ],
       chartPoints: "M 0 95 Q 50 90 100 85 T 200 75 T 300 50 T 400 35 T 500 25 T 600 18",
     },
@@ -203,7 +204,7 @@ export default function ProfessionalSection() {
             Professional <span className="italic font-light text-brand-violet">Experiments</span>
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light">
-            Blending computer applications with AI Powered Digital Marketing funnels to build user-friendly web assets.
+            Combining Next.js web development with creative social strategies and visual content calendars.
           </p>
         </div>
 
@@ -247,34 +248,34 @@ export default function ProfessionalSection() {
             {/* Control Panel Tabs */}
             <div className="flex flex-wrap gap-2.5 bg-black/5 p-1.5 rounded-full border border-black/5 w-fit">
               <button
-                onClick={() => setSelectedCampaign("seo")}
+                onClick={() => setSelectedCampaign("webdev")}
                 className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${
-                  selectedCampaign === "seo"
+                  selectedCampaign === "webdev"
                     ? "bg-white text-brand-cyan border border-brand-cyan/20 shadow-sm"
                     : "text-slate-500 hover:text-slate-800"
                 }`}
               >
-                SEO Experiments
+                Web Core Vitals
               </button>
               <button
-                onClick={() => setSelectedCampaign("copywriting")}
+                onClick={() => setSelectedCampaign("social")}
                 className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${
-                  selectedCampaign === "copywriting"
-                    ? "bg-white text-brand-magenta border border-brand-magenta/20 shadow-sm"
+                  selectedCampaign === "social"
+                    ? "bg-white text-brand-magenta border-brand-magenta/20 shadow-sm"
                     : "text-slate-500 hover:text-slate-800"
                 }`}
               >
-                AI Prompts
+                Social Channels
               </button>
               <button
-                onClick={() => setSelectedCampaign("funnel")}
+                onClick={() => setSelectedCampaign("content")}
                 className={`px-4 py-2 rounded-full text-xs font-semibold uppercase tracking-wider transition-all ${
-                  selectedCampaign === "funnel"
-                    ? "bg-white text-brand-violet border border-brand-violet/20 shadow-sm"
+                  selectedCampaign === "content"
+                    ? "bg-white text-brand-violet border-brand-violet/20 shadow-sm"
                     : "text-slate-500 hover:text-slate-800"
                 }`}
               >
-                Conversion ROI
+                Content Campaigns
               </button>
             </div>
           </div>
@@ -312,7 +313,7 @@ export default function ProfessionalSection() {
 
               <div className="flex items-center gap-2 text-xs text-slate-400 font-light">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand-cyan animate-pulse"></span>
-                <span>Values logged from site funnels and custom script tracking.</span>
+                <span>Performance metrics tracked using web performance tests and social media page APIs.</span>
               </div>
             </div>
 
@@ -379,12 +380,12 @@ export default function ProfessionalSection() {
           
           <div className="flex items-center gap-2 text-brand-violet text-xs font-bold uppercase tracking-widest mb-2">
             <Calculator className="w-4 h-4 animate-pulse" />
-            <span>Interactive growth sandbox</span>
+            <span>Interactive campaign sandbox</span>
           </div>
           
           <div className="mb-8">
             <h3 className="text-2xl font-serif font-normal text-slate-800 mb-2">
-              Programmatic ROI Calculator
+              Social Campaign &amp; Web Conversion Estimator
             </h3>
             <p className="text-slate-500 text-xs sm:text-sm font-light">
               Demonstrating the bridge between code logic (React state calculations) and digital marketing economics. Slide the values to estimate your campaign returns.
@@ -399,53 +400,70 @@ export default function ProfessionalSection() {
                 <span>Campaign Parameters</span>
               </h4>
               
-              {/* Ad Spend */}
+              {/* Campaign Cost */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-semibold">
-                  <span className="text-slate-600">Monthly Ad Budget</span>
-                  <span className="text-brand-violet font-bold">${adSpend.toLocaleString()}</span>
+                  <span className="text-slate-600">Campaign Cost (Budget)</span>
+                  <span className="text-brand-violet font-bold">${campaignCost.toLocaleString()}</span>
                 </div>
                 <input
                   type="range"
-                  min="200"
-                  max="10000"
-                  step="100"
-                  value={adSpend}
-                  onChange={(e) => setAdSpend(Number(e.target.value))}
+                  min="50"
+                  max="5000"
+                  step="50"
+                  value={campaignCost}
+                  onChange={(e) => setCampaignCost(Number(e.target.value))}
                   className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
                 />
               </div>
 
-              {/* CPC */}
+              {/* Social Reach */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-semibold">
-                  <span className="text-slate-600">Cost Per Click (CPC)</span>
-                  <span className="text-brand-violet font-bold">${cpc.toFixed(2)}</span>
+                  <span className="text-slate-600">Estimated Social Reach</span>
+                  <span className="text-brand-violet font-bold">{socialReach.toLocaleString()} users</span>
                 </div>
                 <input
                   type="range"
-                  min="0.10"
-                  max="5.00"
-                  step="0.05"
-                  value={cpc}
-                  onChange={(e) => setCpc(Number(e.target.value))}
+                  min="500"
+                  max="100000"
+                  step="500"
+                  value={socialReach}
+                  onChange={(e) => setSocialReach(Number(e.target.value))}
                   className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
                 />
               </div>
 
-              {/* Conversion Rate */}
+              {/* Social CTR */}
               <div className="space-y-2">
                 <div className="flex justify-between text-xs font-semibold">
-                  <span className="text-slate-600">Landing Page Conv. Rate</span>
-                  <span className="text-brand-violet font-bold">{convRate.toFixed(1)}%</span>
+                  <span className="text-slate-600">Social Post Click-Through Rate (CTR)</span>
+                  <span className="text-brand-violet font-bold">{socialCtr.toFixed(1)}%</span>
                 </div>
                 <input
                   type="range"
-                  min="0.5"
+                  min="0.2"
+                  max="10.0"
+                  step="0.1"
+                  value={socialCtr}
+                  onChange={(e) => setSocialCtr(Number(e.target.value))}
+                  className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
+                />
+              </div>
+
+              {/* Web Conversion Rate */}
+              <div className="space-y-2">
+                <div className="flex justify-between text-xs font-semibold">
+                  <span className="text-slate-600">Website Conversion Rate</span>
+                  <span className="text-brand-violet font-bold">{webConvRate.toFixed(1)}%</span>
+                </div>
+                <input
+                  type="range"
+                  min="0.2"
                   max="15.0"
                   step="0.1"
-                  value={convRate}
-                  onChange={(e) => setConvRate(Number(e.target.value))}
+                  value={webConvRate}
+                  onChange={(e) => setWebConvRate(Number(e.target.value))}
                   className="w-full h-1 bg-black/10 rounded-lg appearance-none cursor-pointer accent-brand-violet"
                 />
               </div>
@@ -458,8 +476,8 @@ export default function ProfessionalSection() {
                 </div>
                 <input
                   type="range"
-                  min="10"
-                  max="500"
+                  min="5"
+                  max="300"
                   step="5"
                   value={aov}
                   onChange={(e) => setAov(Number(e.target.value))}
@@ -478,16 +496,16 @@ export default function ProfessionalSection() {
               {/* Grid of basic stats */}
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <div className="p-4 rounded-xl border border-black/5 bg-white/60">
-                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Clicks</span>
-                  <span className="text-lg font-black text-slate-800">{clicks.toLocaleString()}</span>
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Web Traffic (Clicks)</span>
+                  <span className="text-lg font-black text-slate-800">{webTraffic.toLocaleString()}</span>
                 </div>
                 <div className="p-4 rounded-xl border border-black/5 bg-white/60">
                   <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Conversions</span>
                   <span className="text-lg font-black text-slate-800">{conversions.toLocaleString()}</span>
                 </div>
                 <div className="p-4 rounded-xl border border-black/5 bg-white/60">
-                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">CAC (Cost/Acq.)</span>
-                  <span className="text-lg font-black text-slate-800">${cac}</span>
+                  <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">CPL (Cost/Lead)</span>
+                  <span className="text-lg font-black text-slate-800">${cpl}</span>
                 </div>
                 <div className="p-4 rounded-xl border border-black/5 bg-white/60">
                   <span className="block text-[10px] text-slate-400 uppercase tracking-wider mb-1">Projected Revenue</span>
@@ -511,7 +529,7 @@ export default function ProfessionalSection() {
                   {isProfitable ? (
                     <span className="text-brand-cyan">✓ Profitable Campaign</span>
                   ) : (
-                    <span className="text-brand-magenta">⚠ Low Conversion / High CPC</span>
+                    <span className="text-brand-magenta">⚠ Low Conversion / Reach</span>
                   )}
                 </div>
               </div>

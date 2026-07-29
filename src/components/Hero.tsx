@@ -52,7 +52,7 @@ export default function Hero() {
         {/* Dynamic Tag */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-slate-600 mb-8 border border-black/5 bg-white/70 shadow-sm font-sans">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-violet/80 animate-pulse"></span>
-          <span>BCA Finalist &amp; Digital Growth Builder</span>
+          <span>Web Developer &amp; Social Media Strategist</span>
         </div>
 
         {/* Editorial Heading */}
@@ -61,17 +61,17 @@ export default function Hero() {
           className="text-5xl sm:text-7xl md:text-8xl font-serif text-slate-800 leading-[1.05] tracking-tight mb-8 font-normal"
         >
           <span className="block italic font-light text-brand-violet mb-2">Hi, I&apos;m Diya.</span>
-          <span>Writing code,</span>
+          <span>Designing webs,</span>
           <br className="hidden sm:inline" />
-          <span className="italic font-light"> framing growth campaigns.</span>
+          <span className="italic font-light"> crafting content stories.</span>
         </h1>
 
         {/* Subtitle */}
         <p
           ref={textRef}
-          className="text-base sm:text-xl text-slate-500 max-w-2xl mx-auto mb-10 leading-relaxed font-light font-sans"
+          className="text-base sm:text-xl text-slate-500 max-w-3xl mx-auto mb-10 leading-relaxed font-light font-sans"
         >
-          Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong> and working as a <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Digital Marketer</strong>, bridging database logic with customer acquisition campaigns.
+          Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong>, specializing in building responsive <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Web Applications</strong>, creative <strong className="text-brand-violet font-semibold font-serif italic text-lg sm:text-xl">Content Creation</strong>, and result-oriented <strong className="text-brand-magenta font-semibold font-serif italic text-lg sm:text-xl">Social Media Management</strong>.
         </p>
 
         {/* Call to Actions */}
@@ -84,14 +84,14 @@ export default function Hero() {
             className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-violet/20 bg-brand-violet/10 text-slate-700 hover:bg-brand-violet/20 hover:border-brand-violet/40 transition-all duration-300 shadow-sm group"
           >
             <GraduationCap className="w-4 h-4 text-brand-violet" />
-            <span>Formal Portfolio</span>
+            <span>Web Portfolio</span>
           </a>
           <a
             href="#professional"
             className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-cyan/25 bg-white/70 text-slate-700 hover:bg-brand-cyan/15 hover:border-brand-cyan/40 transition-all duration-300 shadow-sm group"
           >
             <Briefcase className="w-4 h-4 text-brand-cyan" />
-            <span>Professional Portfolio</span>
+            <span>Social &amp; Content Strategy</span>
           </a>
         </div>
 

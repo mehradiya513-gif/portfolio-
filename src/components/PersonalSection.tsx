@@ -75,9 +75,9 @@ export default function PersonalSection() {
     },
     {
       title: "Creative Extension",
-      subtitle: "Digital Marketer & Strategist",
+      subtitle: "Social Media & Content Strategist",
       description:
-        "Synthesizing computer science logic with digital growth campaigns. Running SEO audits, optimizing landing pages, setting up tracking pixels, and analyzing funnel conversions.",
+        "Synthesizing web development logic with media management. Designing content calendars, writing copy/scripts, tracking engagement, and growing brand audiences.",
       icon: Award,
       color: "text-brand-magenta border-brand-magenta/20 bg-brand-magenta/5",
       tag: "Specialization",
@@ -85,12 +85,13 @@ export default function PersonalSection() {
   ];
 
   const personalInterests = [
-    "Exploring Generative Tech",
-    "Writing Tech Logs",
+    "Content Calendar Planning",
+    "Writing Creative Copy",
     "Cozy UI/UX Layout Design",
-    "Analyzing Digital Funnels",
+    "Social Media Analytics",
+    "Figma & Graphic Design",
+    "React & Next.js Coding",
     "Sipping Green Tea",
-    "Reading Modern Essayists",
   ];
 
   return (
@@ -110,7 +111,7 @@ export default function PersonalSection() {
             My Story &amp; <span className="italic font-light text-brand-violet">Journey</span>
           </h2>
           <p className="text-slate-500 max-w-xl mx-auto text-sm sm:text-base font-light font-sans">
-            A small look into my school notebooks, code files, and how I find joy connecting database logic with marketing copy.
+            A small look into my school notebooks, code files, and how I find joy connecting frontend logic with creative media.
           </p>
         </div>
 
@@ -160,10 +161,10 @@ export default function PersonalSection() {
               <div>
                 <h3 className="text-3xl font-serif text-slate-800 mb-4 flex items-center gap-3 font-normal">
                   <Milestone className="w-6 h-6 text-brand-violet/80" />
-                  <span>A space where coding meets copywriting.</span>
+                  <span>Bridging web development with creative media.</span>
                 </h3>
                 <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-6 font-light font-sans">
-                  At 19, I don&apos;t think code should exist in a vacuum. Throughout my school years at <strong className="text-slate-800 font-medium">SPS School</strong> and now in my final year of <strong className="text-slate-800 font-medium">BCA studies</strong>, I&apos;ve loved designing database systems and structuring clean scripts. But I also discovered that a system only matters if it reaches people. That&apos;s why I threw myself into AI Powered Digital Marketing—to learn how to talk to search crawlers, write compelling content with AI tools, and map what makes users click.
+                  Throughout my studies in the <strong className="text-slate-800 font-medium">BCA program</strong> and school days at <strong className="text-slate-800 font-medium">SPS School</strong>, I fell in love with coding and frontend UI development. But I also discovered that code is only half the equation—how we tell stories and connect with people matters just as much. That is why I specialized in content creation and social media management. I build modern, clean web interfaces while driving engagement and brand strategy on social platforms.
                 </p>
               </div>
               
@@ -194,9 +195,9 @@ export default function PersonalSection() {
                 </div>
                 
                 <div className="border-t border-black/5 pt-3">
-                  <span className="block font-serif italic text-slate-800 text-base mb-1">Why digital marketing?</span>
+                  <span className="block font-serif italic text-slate-800 text-base mb-1">Why content &amp; social?</span>
                   <span className="text-xs text-slate-500 font-light leading-relaxed">
-                    Because code is written for machines, but software is launched for people. Understanding SEO, analytics, and prompt frameworks bridges that bridge.
+                    Because code builds the structure, but storytelling creates the audience. Combining technical web skills with content allows me to design pages people actually want to read and share.
                   </span>
                 </div>
 
