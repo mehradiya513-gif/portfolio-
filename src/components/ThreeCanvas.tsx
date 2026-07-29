@@ -14,9 +14,9 @@ function DriftingMotes() {
     const colors = new Float32Array(count * 3);
     const speeds = new Float32Array(count);
 
-    const colorIvory = new THREE.Color("#eae3d2");
-    const colorPeach = new THREE.Color("#dfbca0");
-    const colorLilac = new THREE.Color("#c0b3d5");
+    const colorIvory = new THREE.Color("#fff5f5");
+    const colorPeach = new THREE.Color("#e599ad");
+    const colorLilac = new THREE.Color("#c5b5e5");
 
     // Pure LCG pseudo-random generator to satisfy react-hooks/purity
     let seed = 1;
@@ -117,7 +117,7 @@ export default function ThreeCanvas() {
   return (
     <div className="absolute inset-0 w-full h-full -z-10 bg-transparent overflow-hidden pointer-events-none">
       {/* Light warm-tinted vignette overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,9,11,0.1),#09090b_90%)] pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,248,248,0.2),#fff8f8_90%)] pointer-events-none z-10" />
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
         dpr={[1, 2]}
