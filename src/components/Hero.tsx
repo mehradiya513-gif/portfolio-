@@ -109,7 +109,7 @@ export default function Hero() {
               <div className="relative p-3 bg-white/40 backdrop-blur-md rounded-[3rem] border border-brand-magenta/20 shadow-xl overflow-hidden">
                 <div className="overflow-hidden rounded-[2.5rem] relative aspect-[3/4.2] border border-brand-magenta/10 shadow-inner">
                   <img
-                    src="/Screenshot_20250330_022207_Gallery.jpg"
+                    src="./Screenshot_20250330_022207_Gallery.jpg"
                     alt="Diya Portrait"
                     className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-700"
                   />
