@@ -167,28 +167,7 @@ export default function ContactSection() {
                 </div>
               </div>
 
-              {/* Professional Network Links */}
-              <div className="border-t border-black/5 pt-8">
-                <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-400 mb-4">
-                  Digital Spaces
-                </h4>
-                <div className="flex flex-col gap-2">
-                  <a
-                    href="#"
-                    className="flex justify-between items-center text-sm text-slate-500 hover:text-slate-800 transition-colors py-2 border-b border-black/5 group"
-                  >
-                    <span>LinkedIn</span>
-                    <ArrowRight className="w-4 h-4 text-brand-cyan -translate-x-1 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all" />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex justify-between items-center text-sm text-slate-500 hover:text-slate-800 transition-colors py-2 group"
-                  >
-                    <span>GitHub</span>
-                    <ArrowRight className="w-4 h-4 text-brand-violet -translate-x-1 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all" />
-                  </a>
-                </div>
-              </div>
+
             </div>
           </div>
 
