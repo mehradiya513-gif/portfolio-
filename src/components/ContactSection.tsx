@@ -182,17 +182,10 @@ export default function ContactSection() {
                   </a>
                   <a
                     href="#"
-                    className="flex justify-between items-center text-sm text-slate-500 hover:text-slate-800 transition-colors py-2 border-b border-black/5 group"
+                    className="flex justify-between items-center text-sm text-slate-500 hover:text-slate-800 transition-colors py-2 group"
                   >
                     <span>GitHub</span>
                     <ArrowRight className="w-4 h-4 text-brand-violet -translate-x-1 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all" />
-                  </a>
-                  <a
-                    href="#"
-                    className="flex justify-between items-center text-sm text-slate-500 hover:text-slate-800 transition-colors py-2 group"
-                  >
-                    <span>Digital Sandbox</span>
-                    <ArrowRight className="w-4 h-4 text-brand-magenta -translate-x-1 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition-all" />
                   </a>
                 </div>
               </div>
