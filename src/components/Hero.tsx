@@ -48,51 +48,77 @@ export default function Hero() {
       {/* Subtle Grid overlay */}
       <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
 
-      <div className="max-w-5xl mx-auto px-6 text-left relative z-10 w-full">
-        {/* Dynamic Tag */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-slate-600 mb-8 border border-black/5 bg-white/70 shadow-sm font-sans w-fit">
-          <span className="w-1.5 h-1.5 rounded-full bg-brand-violet/80 animate-pulse"></span>
-          <span>Web Developer &amp; Social Media Strategist</span>
-        </div>
+      <div className="max-w-7xl mx-auto px-6 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center pt-8">
+          {/* Text Content Column */}
+          <div className="lg:col-span-7 flex flex-col items-start text-left">
+            {/* Dynamic Tag */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-card text-xs font-semibold text-slate-600 mb-8 border border-black/5 bg-white/70 shadow-sm font-sans w-fit">
+              <span className="w-1.5 h-1.5 rounded-full bg-brand-violet/80 animate-pulse"></span>
+              <span>Web Developer &amp; Social Media Strategist</span>
+            </div>
 
-        {/* Editorial Heading */}
-        <h1
-          ref={titleRef}
-          className="text-5xl sm:text-7xl md:text-8xl font-serif text-slate-800 leading-[1.05] tracking-tight mb-8 font-normal"
-        >
-          <span className="block italic font-light text-brand-violet mb-2">Hi, I&apos;m Diya.</span>
-          <span>Designing webs,</span>
-          <br className="hidden sm:inline" />
-          <span className="italic font-light"> crafting content stories.</span>
-        </h1>
+            {/* Editorial Heading */}
+            <h1
+              ref={titleRef}
+              className="text-5xl sm:text-7xl md:text-8xl font-serif text-slate-800 leading-[1.05] tracking-tight mb-8 font-normal"
+            >
+              <span className="block italic font-light text-brand-violet mb-2">Hi, I&apos;m Diya.</span>
+              <span>Designing webs,</span>
+              <br className="hidden sm:inline" />
+              <span className="italic font-light"> crafting content stories.</span>
+            </h1>
 
-        {/* Subtitle */}
-        <p
-          ref={textRef}
-          className="text-base sm:text-xl text-slate-500 max-w-3xl mb-10 leading-relaxed font-light font-sans"
-        >
-          Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong>, specializing in building responsive <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Web Applications</strong>, creative <strong className="text-brand-violet font-semibold font-serif italic text-lg sm:text-xl">Content Creation</strong>, and result-oriented <strong className="text-brand-magenta font-semibold font-serif italic text-lg sm:text-xl">Social Media Management</strong>.
-        </p>
+            {/* Subtitle */}
+            <p
+              ref={textRef}
+              className="text-base sm:text-xl text-slate-500 max-w-3xl mb-10 leading-relaxed font-light font-sans"
+            >
+              Welcome to my digital living room. I am a student pursuing my <strong className="text-slate-800 font-semibold font-serif italic text-lg sm:text-xl">Bachelor of Computer Applications</strong>, specializing in building responsive <strong className="text-brand-cyan font-semibold font-serif italic text-lg sm:text-xl">Web Applications</strong>, creative <strong className="text-brand-violet font-semibold font-serif italic text-lg sm:text-xl">Content Creation</strong>, and result-oriented <strong className="text-brand-magenta font-semibold font-serif italic text-lg sm:text-xl">Social Media Management</strong>.
+            </p>
 
-        {/* Call to Actions */}
-        <div
-          ref={buttonRef}
-          className="flex flex-col sm:flex-row items-center justify-start w-full gap-4 font-sans"
-        >
-          <a
-            href="#formal"
-            className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-violet/20 bg-brand-violet/10 text-slate-700 hover:bg-brand-violet/20 hover:border-brand-violet/40 transition-all duration-300 shadow-sm group"
-          >
-            <GraduationCap className="w-4 h-4 text-brand-violet" />
-            <span>Web Portfolio</span>
-          </a>
-          <a
-            href="#professional"
-            className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-cyan/25 bg-white/70 text-slate-700 hover:bg-brand-cyan/15 hover:border-brand-cyan/40 transition-all duration-300 shadow-sm group"
-          >
-            <Briefcase className="w-4 h-4 text-brand-cyan" />
-            <span>Social &amp; Content Strategy</span>
-          </a>
+            {/* Call to Actions */}
+            <div
+              ref={buttonRef}
+              className="flex flex-col sm:flex-row items-center justify-start w-full gap-4 font-sans"
+            >
+              <a
+                href="#formal"
+                className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-violet/20 bg-brand-violet/10 text-slate-700 hover:bg-brand-violet/20 hover:border-brand-violet/40 transition-all duration-300 shadow-sm group"
+              >
+                <GraduationCap className="w-4 h-4 text-brand-violet" />
+                <span>Web Portfolio</span>
+              </a>
+              <a
+                href="#professional"
+                className="w-full sm:w-auto px-6 py-3 rounded-full text-xs uppercase tracking-wider font-semibold flex items-center justify-center gap-2 border border-brand-cyan/25 bg-white/70 text-slate-700 hover:bg-brand-cyan/15 hover:border-brand-cyan/40 transition-all duration-300 shadow-sm group"
+              >
+                <Briefcase className="w-4 h-4 text-brand-cyan" />
+                <span>Social &amp; Content Strategy</span>
+              </a>
+            </div>
+          </div>
+
+          {/* Portrait Image Column */}
+          <div className="lg:col-span-5 flex justify-center lg:justify-end mt-8 lg:mt-0">
+            <div className="relative group max-w-[280px] sm:max-w-[320px] w-full">
+              {/* Ambient backing glow (soft pink and lavender) */}
+              <div className="absolute -inset-4 bg-gradient-to-tr from-brand-magenta/30 to-brand-violet/20 rounded-[3rem] blur-2xl opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
+              
+              {/* Elegant double-border frame */}
+              <div className="relative p-3 bg-white/40 backdrop-blur-md rounded-[3rem] border border-brand-magenta/20 shadow-xl overflow-hidden">
+                <div className="overflow-hidden rounded-[2.5rem] relative aspect-[3/4.2] border border-brand-magenta/10 shadow-inner">
+                  <img
+                    src="/Screenshot_20250330_022207_Gallery.jpg"
+                    alt="Diya Portrait"
+                    className="w-full h-full object-cover object-center scale-100 group-hover:scale-105 transition-transform duration-700"
+                  />
+                  {/* Soft elegant vignette overlay */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-magenta/10 to-transparent pointer-events-none" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Scroll indicator */}
