@@ -117,7 +117,7 @@ export default function ThreeCanvas() {
   return (
     <div className="absolute inset-0 w-full h-full -z-10 bg-transparent overflow-hidden pointer-events-none">
       {/* Light warm-tinted vignette overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(251,250,245,0.1),#fbfaf5_90%)] pointer-events-none z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(9,9,11,0.1),#09090b_90%)] pointer-events-none z-10" />
       <Canvas
         camera={{ position: [0, 0, 5], fov: 60 }}
         dpr={[1, 2]}
