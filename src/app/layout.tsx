@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Diya | BCA Student & AI-Powered Digital Marketer",
   description: "Professional portfolio of Diya, a final year BCA student bridging the gap between computer applications and AI-powered digital marketing.",
+  verification: {
+    google: "plxEYwa1p362uIaJKb3dufRdJl10XYD33T86liqh9Ao",
+  },
 };
 
 export default function RootLayout({
