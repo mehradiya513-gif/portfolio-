@@ -46,12 +46,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/#home", icon: Home },
-    { name: "Personal", href: "/#personal", icon: User },
-    { name: "Formal Portfolio", href: "/#formal", icon: GraduationCap },
-    { name: "Professional Portfolio", href: "/#professional", icon: Briefcase },
-    { name: "Insights", href: "/insights", icon: FileText },
-    { name: "Contact", href: "/#contact", icon: Mail },
+    { name: "Home", href: "#home", icon: Home },
+    { name: "Personal", href: "#personal", icon: User },
+    { name: "Formal Portfolio", href: "#formal", icon: GraduationCap },
+    { name: "Professional Portfolio", href: "#professional", icon: Briefcase },
+    { name: "Insights", href: "#insights", icon: FileText },
+    { name: "Contact", href: "#contact", icon: Mail },
   ];
 
   return (
@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Editorial Logo */}
         <div ref={logoRef} className="flex items-center gap-2">
           <a
-            href="/#home"
+            href="#home"
             className="text-3xl font-serif italic text-slate-800 hover:text-brand-violet transition-colors lowercase font-normal"
           >
             diya<span className="text-brand-cyan font-sans font-bold">.</span>
