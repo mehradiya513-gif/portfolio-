@@ -44,6 +44,8 @@ async function main() {
     const componentCode = `
 import React from 'react';
 import type { Metadata } from 'next';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'Diya Mehra - Blog Page ${i}',
@@ -52,10 +54,11 @@ export const metadata: Metadata = {
 
 export default function DiyaMehraBlogPage${i}() {
   return (
-    <div className="min-h-screen bg-gray-50 py-12">
-      <div className="container mx-auto px-4 max-w-4xl bg-white shadow-xl rounded-2xl border border-gray-100 p-8 sm:p-12">
+    <div className="min-h-screen bg-[#fbfaf5] text-slate-800 flex flex-col pt-24">
+      <Navbar />
+      <div className="flex-grow container mx-auto px-4 max-w-4xl bg-white shadow-sm rounded-2xl border border-black/5 p-8 sm:p-12 mb-12 relative z-10">
         <header className="mb-10 text-center">
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 capitalize">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-brand-violet to-brand-cyan mb-4 capitalize">
             Blog Page ${i}: About Diya Mehra
           </h1>
           <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">
@@ -63,10 +66,11 @@ export default function DiyaMehraBlogPage${i}() {
           </p>
         </header>
 
-        <article className="space-y-6 text-lg text-gray-700 leading-relaxed font-serif text-justify">
+        <article className="space-y-6 text-lg text-slate-600 leading-relaxed font-sans text-justify font-light">
           ${paragraphs.map((p, idx) => `<p key="${idx}">${p}</p>`).join('\n          ')}
         </article>
       </div>
+      <Footer />
     </div>
   );
 }
