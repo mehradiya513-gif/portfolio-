@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 import PersonalSection from "@/components/PersonalSection";
 import FormalSection from "@/components/FormalSection";
 import ProfessionalSection from "@/components/ProfessionalSection";
-import InsightsSection from "@/components/InsightsSection";
+import BlogSection from "@/components/BlogSection";
 import ContactSection from "@/components/ContactSection";
 
 // Dynamically import ThreeCanvas to ensure it runs only on the client
@@ -65,8 +65,8 @@ export default function Home() {
       {/* Professional AI Digital Marketing Analytics Portfolio */}
       <ProfessionalSection />
 
-      {/* SEO Insights (25 Pages content) */}
-      <InsightsSection />
+      {/* Blog Pages (25 Posts) */}
+      <BlogSection />
 
       {/* Contact Section */}
       <ContactSection />
@@ -79,7 +79,7 @@ export default function Home() {
             <a href="#personal" className="hover:text-slate-800 transition-colors">Personal</a>
             <a href="#formal" className="hover:text-slate-800 transition-colors">Formal Portfolio</a>
             <a href="#professional" className="hover:text-slate-800 transition-colors">Professional Portfolio</a>
-            <a href="#insights" className="hover:text-slate-800 transition-colors">Insights (SEO)</a>
+            <a href="#blog" className="hover:text-slate-800 transition-colors">Blog</a>
             <a href="#contact" className="hover:text-slate-800 transition-colors">Contact</a>
           </div>
           <p>© {new Date().getFullYear()} Diya. All rights reserved.</p>
