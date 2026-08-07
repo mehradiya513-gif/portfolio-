@@ -5,7 +5,7 @@ const NUM_PAGES = 25;
 const WORDS_PER_PAGE = 4500;
 const KEYWORD = 'diya mehra';
 
-const baseText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`;
+const baseText = `My name is Diya Mehra, and I am a 19-year-old web developer and digital marketing strategist. Currently, I am in my final year of the BCA program, building my foundation in computer science, databases, and modern web frameworks like React and Next.js. My journey into technology started at SPS School, where I first learned to code. Since then, I have expanded my skills to include content creation, UI/UX design, and social media analytics. I love combining frontend logic with creative media to build websites that are not only functional but also beautiful and engaging. When I am not coding, I focus on understanding social media metrics and creating content calendars that drive real engagement. I believe that good code builds the foundation, but storytelling connects with the audience.`;
 
 const generateContent = () => {
   let paragraphs = [];
@@ -30,7 +30,7 @@ async function main() {
   const rootDir = path.join(process.cwd(), 'src', 'app');
   
   for (let i = 1; i <= NUM_PAGES; i++) {
-    const pageName = `diya-mehra-${i}`;
+    const pageName = `blog-${i}`;
     const dirPath = path.join(rootDir, pageName);
     
     await fs.mkdir(dirPath, { recursive: true });
@@ -46,17 +46,17 @@ import React from 'react';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Diya Mehra - Insight ${i}',
-  description: 'SEO optimized page focusing on Diya Mehra and key insights. Page ${i}',
+  title: 'Diya Mehra - Blog Page ${i}',
+  description: 'A blog page detailing the journey and skills of Diya Mehra. Page ${i}',
 };
 
-export default function DiyaMehraPage${i}() {
+export default function DiyaMehraBlogPage${i}() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">
       <div className="container mx-auto px-4 max-w-4xl bg-white shadow-xl rounded-2xl border border-gray-100 p-8 sm:p-12">
         <header className="mb-10 text-center">
           <h1 className="text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600 mb-4 capitalize">
-            diya mehra: Insight ${i}
+            Blog Page ${i}: About Diya Mehra
           </h1>
           <p className="text-gray-500 font-medium tracking-wide uppercase text-sm">
             SEO Pillar Content — ~4500 Words
